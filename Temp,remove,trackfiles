@@ -1,0 +1,120 @@
+
+## Temporarily Save Work with Stash
+
+Use `git stash` when you need to switch branches but are not ready to commit your current changes.
+
+| Command | Explanation |
+|---|---|
+| `git stash` | Temporarily save tracked changes |
+| `git stash -u` | Save tracked and untracked files |
+| `git stash list` | List saved stashes |
+| `git stash show` | Show a summary of the latest stash |
+| `git stash apply` | Restore the latest stash and keep it in the list |
+| `git stash pop` | Restore the latest stash and remove it if successful |
+| `git stash drop` | Delete the latest stash |
+| `git stash clear` | Delete all stashes |
+
+**Example:**
+
+```bash
+# Save unfinished work
+git stash
+
+# Switch branch
+git switch main
+
+# Return to the feature branch
+git switch feature-login
+
+# Restore unfinished work
+git stash pop
+```
+
+---
+
+## Track, Move and Remove Files
+
+| Command | Explanation |
+|---|---|
+| `git rm <file>` | Remove a file and stage its deletion |
+| `git rm --cached <file>` | Stop tracking a file but keep it locally |
+| `git mv <old> <new>` | Move or rename a tracked file |
+| `git status` | Check file changes |
+| `git diff --summary` | Show change summaries |
+
+**Examples:**
+
+```bash
+# Remove a file from the project and stage its deletion
+git rm old.html
+
+# Rename a file
+git mv index.html home.html
+
+# Stop tracking a file but keep it on your computer
+git rm --cached config.txt
+```
+
+---
+
+## Ignore Files with `.gitignore`
+
+A `.gitignore` file tells Git which untracked files and directories it should ignore.
+
+Create a file named `.gitignore` in your repository.
+
+**Example:**
+
+```gitignore
+# Log files
+*.log
+logs/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Node.js
+node_modules/
+
+# Build files
+dist/
+build/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+```
+
+**Useful Commands:**
+
+```bash
+# Show ignored files too
+git status --ignored
+
+# Check why a file is ignored
+git check-ignore -v .env
+```
+
+**Important Notes:**
+
+- `.gitignore` does not stop tracking files that were already committed.
+- To stop tracking a file while keeping it locally, use:
+
+```bash
+git rm --cached .env
+git commit -m "Stop tracking environment file"
+```
+
+- Never commit passwords, API keys, AWS access keys, private SSH keys or other secrets.
+- If a secret has already been pushed, revoke or rotate it. Deleting the file alone does not make the secret safe.

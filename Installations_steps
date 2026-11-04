@@ -1,0 +1,33 @@
+## Installation and Initial Setup
+
+**Download Git:**  
+https://git-scm.com/downloads
+
+**1. Check whether Git is installed**
+```bash
+git --version
+```
+
+**2. Configure your identity**
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+```
+
+**3. Enable colored output**
+```bash
+git config --global color.ui auto
+```
+
+**4. View your configuration**
+```bash
+git config --list
+```
+
+**Configuration Scopes**
+
+| Option | Meaning |
+|---|---|
+| `--global` | Applies across all repositories for your user |
+| `--local` | Applies only to the current repository |
+| `--system` | Applies system-wide |

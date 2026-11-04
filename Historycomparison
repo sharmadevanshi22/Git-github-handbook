@@ -1,0 +1,100 @@
+
+A **remote** is a connection to another repository, commonly hosted on GitHub. `origin` is the conventional name for the default remote.
+
+## Remote Repository Commands
+
+| Command | Explanation |
+|---|---|
+| `git remote -v` | View configured remote URLs |
+| `git remote add origin <url>` | Connect local repository to GitHub |
+| `git remote remove origin` | Remove the remote named `origin` |
+| `git remote rename origin upstream` | Rename a remote |
+| `git fetch origin` | Download remote updates without integrating them |
+| `git pull origin main` | Fetch and integrate changes from remote `main` |
+| `git push origin main` | Push local `main` commits to remote `main` |
+| `git push -u origin main` | Push and set upstream tracking |
+| `git push` | Push to the configured upstream branch |
+
+### Fetch vs Pull vs Push
+
+| Command | What happens |
+|---|---|
+| `git fetch` | Downloads remote updates but does not integrate them into your current branch |
+| `git pull` | Fetches and integrates remote changes into your current branch |
+| `git push` | Uploads your local commits to the remote repository |
+
+### Connect a Local Project to GitHub
+
+Create an empty repository on GitHub, then run these commands in your project folder:
+
+```bash
+# Add your GitHub repository URL
+git remote add origin https://github.com/username/Demo1.git
+
+# Verify the remote
+git remote -v
+
+# Rename the current branch to main
+git branch -M main
+
+# Push for the first time and set upstream
+git push -u origin main
+```
+
+After the upstream is configured, you can usually use:
+
+```bash
+git push
+```
+
+**Note:** If the remote repository already contains commits (for example, a README created on GitHub), you may need to fetch and integrate those changes before pushing.
+
+---
+
+## Branching and Merging
+
+Branches let you work on features or bug fixes separately from the main development line.
+
+| Command | Explanation |
+|---|---|
+| `git branch` | List local branches |
+| `git branch -a` | List local and remote-tracking branches |
+| `git branch <name>` | Create a branch |
+| `git switch <branch>` | Switch to an existing branch |
+| `git switch -c <name>` | Create and switch to a new branch |
+| `git checkout <branch>` | Switch branches (older command, still supported) |
+| `git checkout -b <name>` | Create and switch to a new branch |
+| `git branch -d <name>` | Delete a merged local branch |
+| `git branch -D <name>` | Force-delete a local branch |
+| `git branch -m <new-name>` | Rename the current branch |
+| `git merge <branch>` | Merge the named branch into the current branch |
+
+### Practical Branching Example
+
+```bash
+# Create and switch to a feature branch
+git switch -c feature-login
+
+# Make changes, then stage and commit
+git add .
+git commit -m "Added login feature"
+
+# Switch back to main
+git switch main
+
+# Merge feature branch into main
+git merge feature-login
+
+# Push the updated main branch
+git push origin main
+```
+
+### Visual Representation of Branching and Merging
+
+```text
+main:     A ----- B -------- M
+                   \        /
+feature:            C ---- D
+```
+
+The feature branch contains separate commits (`C` and `D`). The merge commit (`M`) brings the work into `main`.

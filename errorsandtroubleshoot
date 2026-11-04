@@ -1,0 +1,51 @@
+
+## Common Errors and Troubleshooting
+
+| Error or Situation | What to Check / Do |
+| --- | --- |
+| `fatal: not a git repository` | Navigate to the correct project folder or run `git init` to initialize a repository |
+| `Author identity unknown` | Configure your Git `user.name` and `user.email` |
+| `nothing to commit` | Check whether you have staged or unstaged changes to commit |
+| `Your branch is ahead by 1 commit` | Check your remote configuration and push the unpushed commit |
+| `rejected (fetch first)` | Fetch and integrate remote changes, resolve any conflicts, then push |
+| `Permission denied (publickey)` | Check your SSH key and GitHub SSH configuration |
+| `Authentication failed` | Check your GitHub authentication method or saved credentials |
+| `src refspec main does not match any` | Check whether the branch exists and whether you have created a commit |
+| `CONFLICT (content)` | Open the conflicted files, resolve the conflicts, stage the files, and complete the merge or rebase |
+
+### Troubleshooting a Push That Does Not Work
+
+If Git displays:
+
+```bash
+Your branch is ahead of 'origin/main' by 1 commit.
+```
+
+Git believes your local branch has one commit that has not been pushed to its tracked remote branch.
+
+Run these commands to investigate:
+
+```bash
+# Check remote URLs
+git remote -v
+
+# Check branch and upstream tracking
+git branch -vv
+
+# Inspect recent commits
+git log --oneline -5
+
+# Push with detailed output
+git push -v origin main
+
+# Check status again
+git status
+```
+
+**Important Notes:**
+
+- Make sure `origin` points to the correct GitHub repository.
+- Confirm that `main` is the correct branch name.
+- Check the output of `git push` for errors or rejection messages.
+- If the push fails, investigate the cause instead of assuming it succeeded.
+- If the push succeeds, run `git status` to confirm that your branch is up to date.

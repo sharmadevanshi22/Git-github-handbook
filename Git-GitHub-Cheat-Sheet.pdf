@@ -1,0 +1,1 @@
+Copy-Item "$HOME\Downloads\Git-GitHub-Cheat-Sheet.pdf" "C:\path\to\Demo1\"

@@ -1,0 +1,69 @@
+## Create or Download a Repository
+
+| Command | What it does |
+|---|---|
+| `git init` | Initialize Git in the current directory |
+| `git clone <url>` | Download an existing repository |
+| `git clone <url> <folder>` | Clone into a folder with a chosen name |
+
+**Examples:**
+
+```bash
+# Initialize a repository in the current folder
+git init
+
+# Clone a GitHub repository
+git clone https://github.com/username/repository.git
+
+# Clone into a specific folder
+git clone https://github.com/username/repository.git Demo1
+```
+
+**Remember:**
+- `git init` creates a new local repository.
+- `git clone` downloads an existing repository and configures its remote connection.
+
+---
+
+## Stage and Commit Changes
+
+These commands help prepare changes and save them in Git history.
+
+| Command | Explanation |
+|---|---|
+| `git status` | Show modified, staged and untracked files |
+| `git add <file>` | Stage a particular file |
+| `git add .` | Stage changes in the current directory |
+| `git add -A` | Stage all changes across the repository |
+| `git reset <file>` | Unstage a file without deleting its changes |
+| `git diff` | Show unstaged changes |
+| `git diff --staged` | Show staged changes |
+| `git commit -m "message"` | Commit staged changes |
+| `git commit -am "message"` | Stage and commit modified tracked files |
+| `git commit --amend` | Modify the most recent commit |
+
+**Example:**
+
+```bash
+# Check current changes
+git status
+
+# Stage a file
+git add index.html
+
+# Review staged changes
+git diff --staged
+
+# Commit changes
+git commit -m "Added index page"
+
+# Verify
+git status
+```
+
+**Important Notes:**
+
+- `git add` does not upload files to GitHub.
+- `git commit` saves changes locally; it does not push them to GitHub.
+- `git commit -am` does not automatically include new, untracked files.
+- A commit is a snapshot of the staged content, not necessarily every file in your project.
