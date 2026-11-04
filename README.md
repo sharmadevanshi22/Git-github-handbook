@@ -9,37 +9,37 @@ Git & GitHub Cheat Sheet
 </p>
 
 <br>
-Introduction
+ <B> Introduction </B>
 <br>
 Git is one of the most widely used version control systems in software development.
-
+<br>
 This cheat sheet is designed to help developers understand Git commands, manage repositories, track code changes, work with branches and collaborate using GitHub.
+<br>
 <B>
 Who is this for? </B>
-
-Beginners learning Git for the first time.
-
-Developers working on individual projects.
-
-Engineers collaborating with development teams.
-
-Anyone preparing for technical interviews.
-
+<br>
+Beginners learning Git for the first time,
+<br>
+Developers working on individual projects,
+<br>
+Engineers collaborating with development teams,
+<br>
+Anyone preparing for technical interviews,
 <br>
 
-What is Git? (The Tracking Tool)
+<b> What is Git? (The Tracking Tool) </b><br>
 
-Git is a piece of software that runs locally on your own computer. It acts like a time machine for your project files.
-• Tracks History: Every time you save your work (called a "commit"), Git takes a snapshot of your files.
-• Time Travel: If you make a mistake or break your code, you can easily roll back to a version that worked perfectly yesterday or last week.
-• Experiment Safely: You can create a copy of your project (called a "branch") to try out a new idea without messing up your main, working version.
+Git is a piece of software that runs locally on your own computer. It acts like a time machine for your project files<br>
+• Tracks History: Every time you save your work (called a "commit"), Git takes a snapshot of your files. <br>
+• Time Travel: If you make a mistake or break your code, you can easily roll back to a version that worked perfectly yesterday or last week.<br>
+• Experiment Safely: You can create a copy of your project (called a "branch") to try out a new idea without messing up your main, working version. <br>
 
-What is GitHub? (The Online Hub)
+<b>What is GitHub? (The Online Hub)</b><br>
 
-GitHub is a cloud-based website. It does not replace Git; it works with Git.
-• Cloud Storage: It hosts your Git projects (called "repositories" or "repos") online so you don't lose them if your computer crashes.
-• Teamwork: It allows multiple people to download the project, make their own changes using Git, and upload them back to the main project.
-• Open Source: It is a social network for developers where millions of people share their code publicly for anyone to use or improve.
+GitHub is a cloud-based website. It does not replace Git; it works with Git. <br>
+• Cloud Storage: It hosts your Git projects (called "repositories" or "repos") online so you don't lose them if your computer crashes.<br>
+• Teamwork: It allows multiple people to download the project, make their own changes using Git, and upload them back to the main project.<br>
+• Open Source: It is a social network for developers where millions of people share their code publicly for anyone to use or improve.<br>
 
 
 ## Git Workflow
@@ -69,5 +69,5 @@ flowchart TD
 </p>
 
 <p align="center">
-  <i>Learn. Practice. Commit. Push. Repeat. 🚀</i>
+  <i>Learn. Practice. Commit. Push. Repeat.</i>
 </p>
