@@ -15,18 +15,15 @@ Git is one of the most widely used version control systems in software developme
 <br>
 This cheat sheet is designed to help developers understand Git commands, manage repositories, track code changes, work with branches and collaborate using GitHub.
 <br>
-<B>
-Who is this for? </B>
-<br>
-Beginners learning Git for the first time,
-<br>
-Developers working on individual projects,
-<br>
-Engineers collaborating with development teams,
-<br>
-Anyone preparing for technical interviews,
-<br>
 
+<br>
+<B>
+Who is this for? </B><br>
+Beginners learning Git for the first time,<br>
+Developers working on individual projects,<br>
+Engineers collaborating with development teams,<br>
+Anyone preparing for technical interviews,<br>
+<br>
 <b> What is Git? (The Tracking Tool) </b><br>
 
 Git is a piece of software that runs locally on your own computer. It acts like a time machine for your project files<br>
